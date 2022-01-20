@@ -38,9 +38,17 @@ html {
 
 header {
   position: fixed;
+  height: 85px;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  color: #4A4A4A;
+  font-size: 1rem;
+  font-family: Roboto;
+  font-weight: normal;
+  line-height: 1.6;
+  padding: 30px;
+  z-index: 1;
 }
 
 header .content {
@@ -55,6 +63,8 @@ header .logo {
 
 header nav ul {
   display: flex;
+  float: right;
+  justify-content: space-between;
 }
 
 nav li {
@@ -111,6 +121,13 @@ header .mobile {
 }
 
 /* Sign Up Section */
+#sign-up-section.banner {
+  background-image: url('../images/banner-landingpage.jpg');
+  background-size: cover;
+  margin: 0;
+  align-items: center;
+  position: relative;
+}
 
 #sign-up-section {
   display: flex;
@@ -120,10 +137,12 @@ header .mobile {
 }
 
 #sign-up-cta {
+  position: absolute;
+  left: 100px;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
-  background-color: #9dc20b;
+  background-color: #9dc20a;
 }
 
 #sign-up-cta .content {
@@ -181,7 +200,7 @@ header .mobile {
   }
 
   #sign-up-cta .email {
-    display: none;
+    font-size: 1.25rem;
   }
 
   #sign-up-cta h1 {
@@ -227,9 +246,21 @@ header .mobile {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.feature .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.feature .content {
+  height: 187px;
 }
 
 .feature h2 {
+  margin-top: 40px;
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
@@ -296,6 +327,7 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
 }
 
 @media only screen and (max-width: 760px) {
@@ -338,7 +370,14 @@ header .mobile {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section {
+  display: flex;
+  height: 190px;
+  align-items: center;
+  justify-content: center;
+}
+
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -351,12 +390,16 @@ header .mobile {
   height: 1.875rem;
 }
 
+#quotes-section img {
+  margin-right: 30px;
+}
+
 @media only screen and (max-width: 760px) {
   #quotes-section content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
